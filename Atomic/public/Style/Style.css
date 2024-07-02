@@ -1,63 +1,17 @@
-body {
+body{
     margin: 0;
     padding: 0;
 }
 
-.main-container {
+.main-container{
     background-color: rgb(113, 128, 212);
     display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    gap: 10px;
+    gap: 0px;
 }
 
-canvas {
+canvas{
     background-color: #fff;
-}
-
-.toolbar {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.toolbar button {
-    font-size: 24px; /* Aumenta el tamaño del texto */
-    padding: 10px; /* Aumenta el tamaño del botón */
-    border: none;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none; /* Elimina el enfoque visual */
-    user-select: none; /* Evita la selección del texto */
-    -webkit-tap-highlight-color: transparent; /* Elimina el resaltado en dispositivos móviles */
-}
-
-.toolbar button:focus,
-.toolbar button:active {
-    outline: none;
-    box-shadow: none;
-}
-
-.toolbar button:hover {
-    background-color: #d0d0d0;
-}
-
-.toolbar label {
-    font-size: 24px; /* Aumenta el tamaño del texto */
-    user-select: none; /* Evita la selección del texto */
-}
-
-.toolbar input[type="color"],
-.toolbar input[type="range"] {
-    width: 50px; /* Ajusta el ancho */
-    height: 50px; /* Ajusta el alto */
-    outline: none; /* Elimina el enfoque visual */
-}
-
-.toolbar input[type="color"]:focus,
-.toolbar input[type="range"]:focus {
-    outline: none; /* Elimina el enfoque visual */
-    box-shadow: none; /* Elimina el enfoque visual */
 }

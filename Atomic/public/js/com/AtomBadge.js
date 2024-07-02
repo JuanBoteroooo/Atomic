@@ -105,13 +105,11 @@ export const AtomBadge = class extends Atom{
     addToBody(){document.body.appendChild(this);}
 
     set shape(val){
-        // this.setProperty('shape', val);
         switch(val){
             case "triangle":{
                 this.mainElement.className = "triangle";
                 break;};
             case "circle":{
-                // this.shadowRoot.getElementById("b1").className = "circle";
                 this.mainElement.className = "circle";
                 break;};
             default :{

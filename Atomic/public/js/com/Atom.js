@@ -8,6 +8,18 @@ export const Atom = class extends HTMLElement{
         this.allBuilt = ()=>{};
         if(props) this.props = props;
         this.actZIndex = 0;
+        this.cssFiles = new Map();
+    }
+
+    async getCssFile(path, fileName) {
+        if(!this.cssFiles.has(fileName)){
+            let css = await fetch(path+fileName+".css").then((response) => response.text());
+            if(!this.cssFiles.has(fileName)) {this.cssFiles.set(fileName, css);};
+            return css;
+        }
+        else{
+            return this.cssFiles.get(fileName);
+        }
     }
 
     getMaxZIndex(){
@@ -54,6 +66,17 @@ export const Atom = class extends HTMLElement{
 
     hide(){this.hidden = true;}
     show(){this.hidden = false;}
+
+    // hide(){ 
+    //     this.style.display = 'none'; 
+    //     return this; 
+    // }
+
+    // show(display){ 
+    //     if(!display) display = 'flex';
+    //     this.style.display = display; 
+    //     return this; 
+    // }
 
     async createInstance(className, props){
         try{

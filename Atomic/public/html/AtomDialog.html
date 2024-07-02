@@ -6,26 +6,19 @@
     <body>
         <script>
             let atomInit = async () => {
-                let b = await atom.createInstance("AtomBadge", {
-                    'id':'b1', 
-                    'caption' : 'Hola',
-                    'style' : {'background-color':'blue'},
-                    'events' : {'click': ()=>{ alert('Hizo click en AtomBadge')}},
-                    'disabled' : true,
-                    'shape':"circle"
-                });
-                console.log(b);
+                let atc = atom.getClass("AtomDialog");
                 let d = await atom.createInstance("AtomDialog", {
-                    'id':'d1',
+                    'id':'dialogJS',
                     'title' : 'My JS Dialog',
                     'showclosebutton' : true,
-                    'centerscreen' : true,
                     'draggable' : true,
                     'style' : {
                         // 'resize' : 'none',
-                        'width' : '400px',
-                        'height' : '300px'
+                        'width' : '30%',
+                        'height' : '30%',
                     },
+                    // 'modal': true, 
+                    'centerscreen' : true,
                 });
                 d.built = ()=>{
                     d.show();
@@ -64,13 +57,12 @@
                 d.addToBody();
             };
         </script>
-        <atom-dialog id = "myDialog" showclosebutton = true centerscreen=true title="My HTML Dialog" draggable=true>
+        <atom-dialog id = "dialogHTML" showclosebutton = true title="My HTML Dialog" draggable=true centerscreen = true style="width:40%; height:70%;">
             <div slot="bodyDialogSlot" style = "height: 70px; display:flex; align-items: center; justify-content: center; gap:10px">
                 <input style = "height: 30px">
                 <input style = "height: 30px">
             </div>
-            <!-- <button slot = "footerDialogSlot">Hola</button> -->
-            <atom-badge id = "b1" slot = "footerDialogSlot" shape = "circle" caption="Hola" style="background-color: blueviolet;"></atom-badge>
+            <button slot = "footerDialogSlot">Hola</button>
         </atom-dialog>
     </body>
 </html>

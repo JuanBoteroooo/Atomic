@@ -3,36 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../Style/Style.cssS">
-    <title>Pizarra Virtual</title>
+    <link rel="stylesheet" href="../Style/Style.css">
+    <title>Document</title>
 </head>
 <body>
     <main class="main-container">
-        <canvas id="myCanvas" height="600" width="800" style="border: 1px solid black;"></canvas>
-        <div class="toolbar">
-            <button onclick="cleanPage()" title="Clean Sheet" tabindex="0">
-                🧹
-            </button>
-            <label for="colorPicker">🎨</label>
-            <input type="color" id="colorPicker" name="colorPicker">
-            <label for="brushSize" id="brushSizeLabel">🖌️</label>
-            <input type="range" id="brushSize" name="brushSize" min="1" max="50" value="5">
-            <button onclick="setEraser()" title="Eraser" tabindex="0">
-                🧽
-            </button>
-            <button onclick="setBrush()" title="Brush" tabindex="0">
-                🖌️
-            </button>
-            <button onclick="setPencil()" title="Pencil" tabindex="0">
-                ✏️
-            </button>
-            <button onclick="setMarker()" title="Marker" tabindex="0">
-                🖍️
-            </button>
-            <button onclick="setPen()" title="Pen" tabindex="0">
-                🖋️
-            </button>
-        </div>
+        <canvas id="myCanvas" height="900px" width="900px" style="border: 1px solid black;"></canvas>
+        <button onclick="cleanPage()">Clean Sheet</button>
     </main>
     <script src="../js/com/Canvas.js"></script>
 </body>
